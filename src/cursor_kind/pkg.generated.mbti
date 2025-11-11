@@ -1,0 +1,605 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "illusory0x0/clang/cursor_kind"
+
+// Values
+const AddrLabelExpr : Int = 120
+
+const AlignedAttr : Int = 441
+
+const AnnotateAttr : Int = 406
+
+const ArraySubscriptExpr : Int = 113
+
+const AsmLabelAttr : Int = 407
+
+const AsmStmt : Int = 215
+
+const BinaryOperator : Int = 114
+
+const BlockExpr : Int = 105
+
+const BreakStmt : Int = 213
+
+const BuiltinBitCastExpr : Int = 280
+
+const CStyleCastExpr : Int = 117
+
+const CUDAConstantAttr : Int = 412
+
+const CUDADeviceAttr : Int = 413
+
+const CUDAGlobalAttr : Int = 414
+
+const CUDAHostAttr : Int = 415
+
+const CUDASharedAttr : Int = 416
+
+const CXXAccessSpecifier : Int = 39
+
+const CXXAddrspaceCastExpr : Int = 152
+
+const CXXBaseSpecifier : Int = 44
+
+const CXXBoolLiteralExpr : Int = 130
+
+const CXXCatchStmt : Int = 223
+
+const CXXConstCastExpr : Int = 127
+
+const CXXDeleteExpr : Int = 135
+
+const CXXDynamicCastExpr : Int = 125
+
+const CXXFinalAttr : Int = 404
+
+const CXXForRangeStmt : Int = 225
+
+const CXXFunctionalCastExpr : Int = 128
+
+const CXXMethod : Int = 21
+
+const CXXNewExpr : Int = 134
+
+const CXXNullPtrLiteralExpr : Int = 131
+
+const CXXOverrideAttr : Int = 405
+
+const CXXParenListInitExpr : Int = 155
+
+const CXXReinterpretCastExpr : Int = 126
+
+const CXXStaticCastExpr : Int = 124
+
+const CXXThisExpr : Int = 132
+
+const CXXThrowExpr : Int = 133
+
+const CXXTryStmt : Int = 224
+
+const CXXTypeidExpr : Int = 129
+
+const CallExpr : Int = 103
+
+const CaseStmt : Int = 203
+
+const CharacterLiteral : Int = 110
+
+const ClassDecl : Int = 4
+
+const ClassTemplate : Int = 31
+
+const ClassTemplatePartialSpecialization : Int = 32
+
+const CompoundAssignOperator : Int = 115
+
+const CompoundLiteralExpr : Int = 118
+
+const CompoundStmt : Int = 202
+
+const ConceptDecl : Int = 604
+
+const ConceptSpecializationExpr : Int = 153
+
+const ConditionalOperator : Int = 116
+
+const ConstAttr : Int = 410
+
+const Constructor : Int = 24
+
+const ContinueStmt : Int = 212
+
+const ConvergentAttr : Int = 438
+
+const ConversionFunction : Int = 26
+
+const DLLExport : Int = 418
+
+const DLLImport : Int = 419
+
+const DeclRefExpr : Int = 101
+
+const DeclStmt : Int = 231
+
+const DefaultStmt : Int = 204
+
+const Destructor : Int = 25
+
+const DoStmt : Int = 208
+
+const EnumConstantDecl : Int = 7
+
+const EnumDecl : Int = 5
+
+const FieldDecl : Int = 6
+
+const FirstAttr : Int = 400
+
+const FirstDecl : Int = 1
+
+const FirstExpr : Int = 100
+
+const FirstExtraDecl : Int = 600
+
+const FirstInvalid : Int = 70
+
+const FirstPreprocessing : Int = 500
+
+const FirstRef : Int = 40
+
+const FirstStmt : Int = 200
+
+const FixedPointLiteral : Int = 149
+
+const FlagEnum : Int = 437
+
+const FloatingLiteral : Int = 107
+
+const ForStmt : Int = 209
+
+const FriendDecl : Int = 603
+
+const FunctionDecl : Int = 8
+
+const FunctionTemplate : Int = 30
+
+const GCCAsmStmt : Int = 215
+
+const GNUNullExpr : Int = 123
+
+const GenericSelectionExpr : Int = 122
+
+const GotoStmt : Int = 210
+
+const IBActionAttr : Int = 401
+
+const IBOutletAttr : Int = 402
+
+const IBOutletCollectionAttr : Int = 403
+
+const IfStmt : Int = 205
+
+const ImaginaryLiteral : Int = 108
+
+const InclusionDirective : Int = 503
+
+const IndirectGotoStmt : Int = 211
+
+const InitListExpr : Int = 119
+
+const IntegerLiteral : Int = 106
+
+const InvalidCode : Int = 73
+
+const InvalidFile : Int = 70
+
+const LabelRef : Int = 48
+
+const LabelStmt : Int = 201
+
+const LambdaExpr : Int = 144
+
+const LastAttr : Int = 441
+
+const LastDecl : Int = 39
+
+const LastExpr : Int = 155
+
+const LastExtraDecl : Int = 604
+
+const LastInvalid : Int = 73
+
+const LastPreprocessing : Int = 503
+
+const LastRef : Int = 50
+
+const LastStmt : Int = 306
+
+const LinkageSpec : Int = 23
+
+const MSAsmStmt : Int = 229
+
+const MacroDefinition : Int = 501
+
+const MacroExpansion : Int = 502
+
+const MacroInstantiation : Int = 502
+
+const MemberRef : Int = 47
+
+const MemberRefExpr : Int = 102
+
+const ModuleImportDecl : Int = 600
+
+const NSConsumed : Int = 424
+
+const NSConsumesSelf : Int = 423
+
+const NSReturnsAutoreleased : Int = 422
+
+const NSReturnsNotRetained : Int = 421
+
+const NSReturnsRetained : Int = 420
+
+const Namespace : Int = 22
+
+const NamespaceAlias : Int = 33
+
+const NamespaceRef : Int = 46
+
+const NoDeclFound : Int = 71
+
+const NoDuplicateAttr : Int = 411
+
+const NonTypeTemplateParameter : Int = 28
+
+const NotImplemented : Int = 72
+
+const NullStmt : Int = 230
+
+const OMPArraySectionExpr : Int = 147
+
+const OMPArrayShapingExpr : Int = 150
+
+const OMPAtomicDirective : Int = 249
+
+const OMPBarrierDirective : Int = 244
+
+const OMPCancelDirective : Int = 256
+
+const OMPCancellationPointDirective : Int = 255
+
+const OMPCanonicalLoop : Int = 289
+
+const OMPCriticalDirective : Int = 242
+
+const OMPDepobjDirective : Int = 286
+
+const OMPDispatchDirective : Int = 291
+
+const OMPDistributeDirective : Int = 260
+
+const OMPDistributeParallelForDirective : Int = 266
+
+const OMPDistributeParallelForSimdDirective : Int = 267
+
+const OMPDistributeSimdDirective : Int = 268
+
+const OMPErrorDirective : Int = 305
+
+const OMPFlushDirective : Int = 246
+
+const OMPForDirective : Int = 234
+
+const OMPForSimdDirective : Int = 250
+
+const OMPGenericLoopDirective : Int = 295
+
+const OMPInteropDirective : Int = 290
+
+const OMPIteratorExpr : Int = 151
+
+const OMPMaskedDirective : Int = 292
+
+const OMPMaskedTaskLoopDirective : Int = 301
+
+const OMPMaskedTaskLoopSimdDirective : Int = 302
+
+const OMPMasterDirective : Int = 241
+
+const OMPMasterTaskLoopDirective : Int = 281
+
+const OMPMasterTaskLoopSimdDirective : Int = 283
+
+const OMPMetaDirective : Int = 294
+
+const OMPOrderedDirective : Int = 248
+
+const OMPParallelDirective : Int = 232
+
+const OMPParallelForDirective : Int = 238
+
+const OMPParallelForSimdDirective : Int = 251
+
+const OMPParallelGenericLoopDirective : Int = 298
+
+const OMPParallelMaskedDirective : Int = 300
+
+const OMPParallelMaskedTaskLoopDirective : Int = 303
+
+const OMPParallelMaskedTaskLoopSimdDirective : Int = 304
+
+const OMPParallelMasterDirective : Int = 285
+
+const OMPParallelMasterTaskLoopDirective : Int = 282
+
+const OMPParallelMasterTaskLoopSimdDirective : Int = 284
+
+const OMPParallelSectionsDirective : Int = 239
+
+const OMPScanDirective : Int = 287
+
+const OMPScopeDirective : Int = 306
+
+const OMPSectionDirective : Int = 236
+
+const OMPSectionsDirective : Int = 235
+
+const OMPSimdDirective : Int = 233
+
+const OMPSingleDirective : Int = 237
+
+const OMPTargetDataDirective : Int = 257
+
+const OMPTargetDirective : Int = 252
+
+const OMPTargetEnterDataDirective : Int = 261
+
+const OMPTargetExitDataDirective : Int = 262
+
+const OMPTargetParallelDirective : Int = 263
+
+const OMPTargetParallelForDirective : Int = 264
+
+const OMPTargetParallelForSimdDirective : Int = 269
+
+const OMPTargetParallelGenericLoopDirective : Int = 299
+
+const OMPTargetSimdDirective : Int = 270
+
+const OMPTargetTeamsDirective : Int = 275
+
+const OMPTargetTeamsDistributeDirective : Int = 276
+
+const OMPTargetTeamsDistributeParallelForDirective : Int = 277
+
+const OMPTargetTeamsDistributeParallelForSimdDirective : Int = 278
+
+const OMPTargetTeamsDistributeSimdDirective : Int = 279
+
+const OMPTargetTeamsGenericLoopDirective : Int = 297
+
+const OMPTargetUpdateDirective : Int = 265
+
+const OMPTaskDirective : Int = 240
+
+const OMPTaskLoopDirective : Int = 258
+
+const OMPTaskLoopSimdDirective : Int = 259
+
+const OMPTaskgroupDirective : Int = 254
+
+const OMPTaskwaitDirective : Int = 245
+
+const OMPTaskyieldDirective : Int = 243
+
+const OMPTeamsDirective : Int = 253
+
+const OMPTeamsDistributeDirective : Int = 271
+
+const OMPTeamsDistributeParallelForDirective : Int = 274
+
+const OMPTeamsDistributeParallelForSimdDirective : Int = 273
+
+const OMPTeamsDistributeSimdDirective : Int = 272
+
+const OMPTeamsGenericLoopDirective : Int = 296
+
+const OMPTileDirective : Int = 288
+
+const OMPUnrollDirective : Int = 293
+
+const ObjCAtCatchStmt : Int = 217
+
+const ObjCAtFinallyStmt : Int = 218
+
+const ObjCAtSynchronizedStmt : Int = 220
+
+const ObjCAtThrowStmt : Int = 219
+
+const ObjCAtTryStmt : Int = 216
+
+const ObjCAutoreleasePoolStmt : Int = 221
+
+const ObjCAvailabilityCheckExpr : Int = 148
+
+const ObjCBoolLiteralExpr : Int = 145
+
+const ObjCBoxable : Int = 436
+
+const ObjCBridgedCastExpr : Int = 141
+
+const ObjCCategoryDecl : Int = 12
+
+const ObjCCategoryImplDecl : Int = 19
+
+const ObjCClassMethodDecl : Int = 17
+
+const ObjCClassRef : Int = 42
+
+const ObjCDesignatedInitializer : Int = 434
+
+const ObjCDynamicDecl : Int = 38
+
+const ObjCEncodeExpr : Int = 138
+
+const ObjCException : Int = 425
+
+const ObjCExplicitProtocolImpl : Int = 433
+
+const ObjCForCollectionStmt : Int = 222
+
+const ObjCImplementationDecl : Int = 18
+
+const ObjCIndependentClass : Int = 427
+
+const ObjCInstanceMethodDecl : Int = 16
+
+const ObjCInterfaceDecl : Int = 11
+
+const ObjCIvarDecl : Int = 15
+
+const ObjCMessageExpr : Int = 104
+
+const ObjCNSObject : Int = 426
+
+const ObjCPreciseLifetime : Int = 428
+
+const ObjCPropertyDecl : Int = 14
+
+const ObjCProtocolDecl : Int = 13
+
+const ObjCProtocolExpr : Int = 140
+
+const ObjCProtocolRef : Int = 41
+
+const ObjCRequiresSuper : Int = 430
+
+const ObjCReturnsInnerPointer : Int = 429
+
+const ObjCRootClass : Int = 431
+
+const ObjCRuntimeVisible : Int = 435
+
+const ObjCSelectorExpr : Int = 139
+
+const ObjCSelfExpr : Int = 146
+
+const ObjCStringLiteral : Int = 137
+
+const ObjCSubclassingRestricted : Int = 432
+
+const ObjCSuperClassRef : Int = 40
+
+const ObjCSynthesizeDecl : Int = 37
+
+const OverloadCandidate : Int = 700
+
+const OverloadedDeclRef : Int = 49
+
+const PackExpansionExpr : Int = 142
+
+const PackedAttr : Int = 408
+
+const ParenExpr : Int = 111
+
+const ParmDecl : Int = 10
+
+const PreprocessingDirective : Int = 500
+
+const PureAttr : Int = 409
+
+const RequiresExpr : Int = 154
+
+const ReturnStmt : Int = 214
+
+const SEHExceptStmt : Int = 227
+
+const SEHFinallyStmt : Int = 228
+
+const SEHLeaveStmt : Int = 247
+
+const SEHTryStmt : Int = 226
+
+const SizeOfPackExpr : Int = 143
+
+const StaticAssert : Int = 602
+
+const StmtExpr : Int = 121
+
+const StringLiteral : Int = 109
+
+const StructDecl : Int = 2
+
+const SwitchStmt : Int = 206
+
+const TemplateRef : Int = 45
+
+const TemplateTemplateParameter : Int = 29
+
+const TemplateTypeParameter : Int = 27
+
+const TranslationUnit : Int = 350
+
+const TypeAliasDecl : Int = 36
+
+const TypeAliasTemplateDecl : Int = 601
+
+const TypeRef : Int = 43
+
+const TypedefDecl : Int = 20
+
+const UnaryExpr : Int = 136
+
+const UnaryOperator : Int = 112
+
+const UnexposedAttr : Int = 400
+
+const UnexposedDecl : Int = 1
+
+const UnexposedExpr : Int = 100
+
+const UnexposedStmt : Int = 200
+
+const UnionDecl : Int = 3
+
+const UsingDeclaration : Int = 35
+
+const UsingDirective : Int = 34
+
+const VarDecl : Int = 9
+
+const VariableRef : Int = 50
+
+const VisibilityAttr : Int = 417
+
+const WarnUnusedAttr : Int = 439
+
+const WarnUnusedResultAttr : Int = 440
+
+const WhileStmt : Int = 207
+
+fn is_attribute(Int) -> Bool
+
+fn is_declaration(Int) -> Bool
+
+fn is_expression(Int) -> Bool
+
+fn is_preprocessing(Int) -> Bool
+
+fn is_reference(Int) -> Bool
+
+fn is_statement(Int) -> Bool
+
+fn is_translationUnit(Int) -> Bool
+
+fn is_unexposed(Int) -> Bool
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+pub type CursorKind = Int
+
+// Traits
+

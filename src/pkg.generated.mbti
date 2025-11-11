@@ -1,0 +1,202 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "illusory0x0/clang"
+
+// Values
+
+// Errors
+type ParseError
+impl Eq for ParseError
+impl Show for ParseError
+
+// Types and methods
+pub(all) enum AvailabilityKind {
+  Available
+  Deprecated
+  NotAvailable
+  NotAccessible
+}
+impl Eq for AvailabilityKind
+impl Show for AvailabilityKind
+
+pub(all) enum CXX_AccessSpecifier {
+  InvalidAccessSpecifier
+  Public
+  Protected
+  Private
+}
+impl Eq for CXX_AccessSpecifier
+impl Show for CXX_AccessSpecifier
+
+pub(all) enum CallingConv {
+  Default
+  C
+  X86StdCall
+  X86FastCall
+  X86ThisCall
+  X86Pascal
+  AAPCS
+  AAPCS_VFP
+  X86RegCall
+  IntelOclBicc
+  X86_64Win64
+  X86_64SysV
+  X86VectorCall
+  Swift
+  PreserveMost
+  PreserveAll
+  AArch64VectorCall
+  SwiftAsync
+  AArch64SVEPCS
+  M68kRTD
+  Invalid
+  CXCallingConv_Unexposed
+}
+impl Eq for CallingConv
+impl Show for CallingConv
+
+type Cursor
+fn Cursor::availability(Self) -> LinkageKind
+fn Cursor::canonical(Self) -> Self
+fn Cursor::cxx_access_specifier(Self) -> CXX_AccessSpecifier
+fn Cursor::display_name(Self) -> Bytes
+fn Cursor::enum_constant_decl_unsigned_value(Self) -> UInt64
+fn Cursor::enum_constant_decl_value(Self) -> Int64
+fn Cursor::enum_decl_integer_type(Self) -> Type
+fn Cursor::extent(Self) -> SourceRange
+fn Cursor::is_function_inlined(Self) -> Bool
+fn Cursor::is_macro_builtin(Self) -> Bool
+fn Cursor::is_macro_function_like(Self) -> Bool
+fn Cursor::is_null(Self) -> Bool
+fn Cursor::kind(Self) -> Int
+fn Cursor::kind_spelling(Int) -> Bytes
+fn Cursor::language(Self) -> LanguageKind
+fn Cursor::lexical_parent(Self) -> Self
+fn Cursor::linkage(Self) -> LinkageKind
+fn Cursor::null() -> Self
+fn Cursor::overloaded_decls(Self, Int) -> Self
+fn Cursor::overloaded_decls_num(Self) -> Int
+fn Cursor::semantic_parent(Self) -> Self
+fn Cursor::source_location(Self) -> SourceLocation
+fn Cursor::spelling(Self) -> Bytes
+fn Cursor::storage_class(Self) -> StorageClass
+fn Cursor::type_(Self) -> Type
+fn Cursor::typedef_decl_underlying_type(Self) -> Type
+fn Cursor::visibility(Self) -> LinkageKind
+impl Eq for Cursor
+
+pub(all) enum ErrorCode {
+  Success
+  Failure
+  Crashed
+  InvalidArguments
+  ASTReadError
+}
+impl Eq for ErrorCode
+impl Show for ErrorCode
+
+type Index
+fn Index::new(Bool, Bool) -> Self
+fn Index::parse(Self, Bytes, FixedArray[Bytes], TranslationUnit_Flags) -> TranslationUnit raise ParseError
+
+pub(all) enum LanguageKind {
+  Invalid
+  C
+  ObjC
+  CPlusPlus
+}
+impl Eq for LanguageKind
+impl Show for LanguageKind
+
+pub(all) enum LinkageKind {
+  Invalid
+  NoLinkage
+  Internal
+  UniqueExternal
+  External
+}
+impl Eq for LinkageKind
+impl Show for LinkageKind
+
+type SourceLocation
+fn SourceLocation::null() -> Self
+impl Eq for SourceLocation
+
+type SourceRange
+impl Eq for SourceRange
+
+type StorageClass
+impl Eq for StorageClass
+impl Show for StorageClass
+
+type TargetInfo
+fn TargetInfo::pointer_width(Self) -> Int
+fn TargetInfo::triple(Self) -> Bytes
+
+type Token
+fn Token::spelling(Self) -> Bytes
+
+type TranslationUnit
+fn TranslationUnit::cursor(Self) -> Cursor
+fn TranslationUnit::target_info(Self) -> TargetInfo
+fn TranslationUnit::tokenize(Self, SourceRange) -> FixedArray[Token]
+
+pub enum TranslationUnit_Flags {
+  None
+  DetailedPreprocessingRecord
+  Incomplete
+  PrecompiledPreamble
+  CacheCompletionResults
+  ForSerialization
+  CXXChainedPCH
+  SkipFunctionBodies
+  IncludeBriefCommentsInCodeCompletion
+  CreatePreambleOnFirstParse
+  KeepGoing
+  SingleFileParse
+  LimitSkipFunctionBodiesToPreamble
+  IncludeAttributedTypes
+  VisitImplicitAttributes
+  IgnoreNonErrorsFromIncludedFiles
+  RetainExcludedConditionalBlocks
+}
+impl BitOr for TranslationUnit_Flags
+impl Eq for TranslationUnit_Flags
+impl Show for TranslationUnit_Flags
+
+type Type
+fn Type::address_space(Self) -> Int
+fn Type::argument(Self, Int) -> Self
+fn Type::arity(Self) -> Int
+fn Type::calling_conv(Self) -> CallingConv
+fn Type::canonical(Self) -> Self
+fn Type::is_const_qualified(Self) -> Bool
+fn Type::is_restrict_qualified(Self) -> Bool
+fn Type::is_volatile_qualified(Self) -> Bool
+fn Type::kind(Self) -> Int
+fn Type::kind_spelling(Int) -> Bytes
+fn Type::offsetof(Self, Bytes) -> Int64
+fn Type::pointee(Self) -> Self
+fn Type::result(Self) -> Self
+fn Type::sizeof(Self) -> Int64
+fn Type::spelling(Self) -> Bytes
+fn Type::type_declaration(Self) -> Cursor
+fn Type::typedef_name(Self) -> Byte
+fn Type::unqualified(Self) -> Self
+impl Eq for Type
+
+pub(all) enum VisibilityKind {
+  Invalid
+  Hidden
+  Protected
+  Default
+}
+impl Eq for VisibilityKind
+impl Show for VisibilityKind
+
+// Type aliases
+pub type CursorKind = Int
+
+pub type TypeKind = Int
+
+// Traits
+

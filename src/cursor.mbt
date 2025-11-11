@@ -10,7 +10,8 @@ pub extern "c" fn Cursor::display_name(self : Cursor) -> Bytes = "illusory0x0_cl
 ///|
 pub extern "c" fn Cursor::type_(self : Cursor) -> Type = "illusory0x0_clang_Cursor_type_"
 
-///| TODO: use pattern match implemented String version
+///|
+/// TODO: use pattern match implemented String version
 pub extern "c" fn Cursor::kind_spelling(k : CursorKind) -> Bytes = "illusory0x0_clang_Cursor_kind_spelling"
 
 ///|

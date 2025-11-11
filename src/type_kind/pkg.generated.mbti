@@ -1,0 +1,265 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "illusory0x0/clang/type_kind"
+
+// Values
+const Accum : Int = 34
+
+const Atomic : Int = 177
+
+const Attributed : Int = 163
+
+const Auto : Int = 118
+
+const BFloat16 : Int = 39
+
+const BTFTagAttributed : Int = 178
+
+const BlockPointer : Int = 102
+
+const Bool : Int = 3
+
+const Char16 : Int = 6
+
+const Char32 : Int = 7
+
+const Char_S : Int = 13
+
+const Char_U : Int = 4
+
+const Complex : Int = 100
+
+const ConstantArray : Int = 112
+
+const Dependent : Int = 26
+
+const DependentSizedArray : Int = 116
+
+const Double : Int = 22
+
+const Elaborated : Int = 119
+
+const Enum : Int = 106
+
+const ExtVector : Int = 176
+
+const FirstBuiltin : Int = 2
+
+const Float : Int = 21
+
+const Float128 : Int = 30
+
+const Float16 : Int = 32
+
+const FunctionNoProto : Int = 110
+
+const FunctionProto : Int = 111
+
+const Half : Int = 31
+
+const Ibm128 : Int = 40
+
+const IncompleteArray : Int = 114
+
+const Int : Int = 17
+
+const Int128 : Int = 20
+
+const Invalid : Int = 0
+
+const LValueReference : Int = 103
+
+const LastBuiltin : Int = 40
+
+const Long : Int = 18
+
+const LongAccum : Int = 35
+
+const LongDouble : Int = 23
+
+const LongLong : Int = 19
+
+const MemberPointer : Int = 117
+
+const NullPtr : Int = 24
+
+const OCLEvent : Int = 158
+
+const OCLImage1dArrayRO : Int = 122
+
+const OCLImage1dArrayRW : Int = 146
+
+const OCLImage1dArrayWO : Int = 134
+
+const OCLImage1dBufferRO : Int = 123
+
+const OCLImage1dBufferRW : Int = 147
+
+const OCLImage1dBufferWO : Int = 135
+
+const OCLImage1dRO : Int = 121
+
+const OCLImage1dRW : Int = 145
+
+const OCLImage1dWO : Int = 133
+
+const OCLImage2dArrayDepthRO : Int = 127
+
+const OCLImage2dArrayDepthRW : Int = 151
+
+const OCLImage2dArrayDepthWO : Int = 139
+
+const OCLImage2dArrayMSAADepthRO : Int = 131
+
+const OCLImage2dArrayMSAADepthRW : Int = 155
+
+const OCLImage2dArrayMSAADepthWO : Int = 143
+
+const OCLImage2dArrayMSAARO : Int = 129
+
+const OCLImage2dArrayMSAARW : Int = 153
+
+const OCLImage2dArrayMSAAWO : Int = 141
+
+const OCLImage2dArrayRO : Int = 125
+
+const OCLImage2dArrayRW : Int = 149
+
+const OCLImage2dArrayWO : Int = 137
+
+const OCLImage2dDepthRO : Int = 126
+
+const OCLImage2dDepthRW : Int = 150
+
+const OCLImage2dDepthWO : Int = 138
+
+const OCLImage2dMSAADepthRO : Int = 130
+
+const OCLImage2dMSAADepthRW : Int = 154
+
+const OCLImage2dMSAADepthWO : Int = 142
+
+const OCLImage2dMSAARO : Int = 128
+
+const OCLImage2dMSAARW : Int = 152
+
+const OCLImage2dMSAAWO : Int = 140
+
+const OCLImage2dRO : Int = 124
+
+const OCLImage2dRW : Int = 148
+
+const OCLImage2dWO : Int = 136
+
+const OCLImage3dRO : Int = 132
+
+const OCLImage3dRW : Int = 156
+
+const OCLImage3dWO : Int = 144
+
+const OCLIntelSubgroupAVCImeDualRefStreamin : Int = 175
+
+const OCLIntelSubgroupAVCImeDualReferenceStreamin : Int = 175
+
+const OCLIntelSubgroupAVCImePayload : Int = 165
+
+const OCLIntelSubgroupAVCImeResult : Int = 169
+
+const OCLIntelSubgroupAVCImeResultDualRefStreamout : Int = 173
+
+const OCLIntelSubgroupAVCImeResultDualReferenceStreamout : Int = 173
+
+const OCLIntelSubgroupAVCImeResultSingleRefStreamout : Int = 172
+
+const OCLIntelSubgroupAVCImeResultSingleReferenceStreamout : Int = 172
+
+const OCLIntelSubgroupAVCImeSingleRefStreamin : Int = 174
+
+const OCLIntelSubgroupAVCImeSingleReferenceStreamin : Int = 174
+
+const OCLIntelSubgroupAVCMcePayload : Int = 164
+
+const OCLIntelSubgroupAVCMceResult : Int = 168
+
+const OCLIntelSubgroupAVCRefPayload : Int = 166
+
+const OCLIntelSubgroupAVCRefResult : Int = 170
+
+const OCLIntelSubgroupAVCSicPayload : Int = 167
+
+const OCLIntelSubgroupAVCSicResult : Int = 171
+
+const OCLQueue : Int = 159
+
+const OCLReserveID : Int = 160
+
+const OCLSampler : Int = 157
+
+const ObjCClass : Int = 28
+
+const ObjCId : Int = 27
+
+const ObjCInterface : Int = 108
+
+const ObjCObject : Int = 161
+
+const ObjCObjectPointer : Int = 109
+
+const ObjCSel : Int = 29
+
+const ObjCTypeParam : Int = 162
+
+const Overload : Int = 25
+
+const Pipe : Int = 120
+
+const Pointer : Int = 101
+
+const RValueReference : Int = 104
+
+const Record : Int = 105
+
+const SChar : Int = 14
+
+const Short : Int = 16
+
+const ShortAccum : Int = 33
+
+const Typedef : Int = 107
+
+const UAccum : Int = 37
+
+const UChar : Int = 5
+
+const UInt : Int = 9
+
+const UInt128 : Int = 12
+
+const ULong : Int = 10
+
+const ULongAccum : Int = 38
+
+const ULongLong : Int = 11
+
+const UShort : Int = 8
+
+const UShortAccum : Int = 36
+
+const Unexposed : Int = 1
+
+const VariableArray : Int = 115
+
+const Vector : Int = 113
+
+const Void : Int = 2
+
+const WChar : Int = 15
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+pub type TypeKind = Int
+
+// Traits
+
