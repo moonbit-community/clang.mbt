@@ -50,7 +50,8 @@ pub extern "c" fn Type::canonical(self : Type) -> Type = "illsuory0x0_clang_Type
 ///|
 pub extern "c" fn Type::spelling(self : Type) -> Bytes = "illusory0x0_clang_Type_spelling"
 
-///| TODO: use pattern match implemented String version
+//|
+/// TODO: use pattern match implemented String version
 pub extern "c" fn Type::kind_spelling(k : TypeKind) -> Bytes = "illusory0x0_clang_Type_kind_spelling"
 
 ///|
