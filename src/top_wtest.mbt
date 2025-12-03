@@ -1,5 +1,5 @@
 ///|
-fnalias @encoding.decode
+using @encoding {decode}
 
 ///|
 impl Show for Type with output(self, logger) {
