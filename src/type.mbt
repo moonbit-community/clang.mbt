@@ -22,11 +22,11 @@ pub extern "c" fn Type::argument(self : Type, index : Int) -> Type = "illusory0x
 ///|
 pub extern "c" fn Type::result(self : Type) -> Type = "illusory0x0_clang_Type_result"
 
-///| 
+///|
 /// Return the size of a type in **bytes**
 pub extern "c" fn Type::sizeof(self : Type) -> Int64 = "illusory0x0_clang_Type_sizeof"
 
-///| 
+///|
 /// Return the offset of a field named S in a record of type T in **bits**
 pub extern "c" fn Type::offsetof(self : Type, member_ : Bytes) -> Int64 = "illusory0x0_clang_Type_offsetof"
 
@@ -50,7 +50,8 @@ pub extern "c" fn Type::canonical(self : Type) -> Type = "illsuory0x0_clang_Type
 ///|
 pub extern "c" fn Type::spelling(self : Type) -> Bytes = "illusory0x0_clang_Type_spelling"
 
-///| TODO: use pattern match implemented String version
+///|
+/// TODO: use pattern match implemented String version
 pub extern "c" fn Type::kind_spelling(k : TypeKind) -> Bytes = "illusory0x0_clang_Type_kind_spelling"
 
 ///|

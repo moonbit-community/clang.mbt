@@ -1,5 +1,5 @@
 ///|
-pub typealias Int as CursorKind
+pub type CursorKind = Int
 
 ///|
 pub const UnexposedDecl : CursorKind = 1
