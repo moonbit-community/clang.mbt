@@ -1,8 +1,6 @@
 ///|
 #borrow(self)
-pub extern "c" fn TranslationUnit::cursor(
-  self : TranslationUnit,
-) -> Cursor = "illusory0x0_clang_TranslationUnit_cursor"
+pub extern "c" fn TranslationUnit::cursor(self : TranslationUnit) -> Cursor = "illusory0x0_clang_TranslationUnit_cursor"
 
 ///|
 #borrow(self)

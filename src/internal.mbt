@@ -17,17 +17,11 @@ extern "c" fn Cursor::_visit_children(
 
 ///|
 #borrow(self, other)
-extern "c" fn Type::_op_equal(
-  self : Type,
-  other : Type,
-) -> Bool = "illusory0x0_clang_Type_op_equal"
+extern "c" fn Type::_op_equal(self : Type, other : Type) -> Bool = "illusory0x0_clang_Type_op_equal"
 
 ///|
 #borrow(self, other)
-extern "c" fn Cursor::_op_equal(
-  self : Cursor,
-  other : Cursor,
-) -> Bool = "illusory0x0_clang_Cursor_op_equal"
+extern "c" fn Cursor::_op_equal(self : Cursor, other : Cursor) -> Bool = "illusory0x0_clang_Cursor_op_equal"
 
 ///|
 #borrow(self, other)
