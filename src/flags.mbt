@@ -17,7 +17,7 @@ pub enum TranslationUnit_Flags {
   VisitImplicitAttributes = 0x2000
   IgnoreNonErrorsFromIncludedFiles = 0x4000
   RetainExcludedConditionalBlocks = 0x8000
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub impl BitOr for TranslationUnit_Flags with lor(self, other) = "%i32_lor"

@@ -2,7 +2,9 @@
 type Index
 
 ///|
-suberror ParseError ErrorCode derive(Show, Eq)
+suberror ParseError {
+  ParseError(ErrorCode)
+} derive(Debug, Eq)
 
 ///|
 type TranslationUnit
