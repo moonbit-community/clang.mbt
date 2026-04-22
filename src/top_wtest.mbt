@@ -33,7 +33,7 @@ test "type decl" {
     csr.children(),
     content="[{ spelling : A, kind: StructDecl }, { spelling : AA, kind: TypedefDecl }, { spelling : x, kind: VarDecl }]",
   )
-  let x = csr.children().find_first(x => x.spelling() == "x").unwrap()
+  let x = csr.children().find_first(x => x.spelling() == b"x").unwrap()
   inspect(x, content="{ spelling : x, kind: VarDecl }")
   inspect(x.type_(), content="{ spelling : AA, kind: Elaborated }")
   inspect(
@@ -230,7 +230,7 @@ test "macro" {
   let tu = index.parse(b"test/macro.c\x00", [], DetailedPreprocessingRecord)
   let csr = tu.cursor()
   inspect(csr, content="{ spelling : test/macro.c, kind: TranslationUnit }")
-  let x = csr.children().find_first(x => x.spelling() == "FOO").unwrap()
+  let x = csr.children().find_first(x => x.spelling() == b"FOO").unwrap()
   inspect(x, content="{ spelling : FOO, kind: macro definition }")
   let range = x.extent()
   let toks = tu.tokenize(range)
@@ -242,7 +242,7 @@ test "macro" {
   )
   let bar = csr
     .children()
-    .find_first(x => x.spelling() == "Bar" &&
+    .find_first(x => x.spelling() == b"Bar" &&
       x.kind() == @cursor_kind.MacroDefinition)
     .unwrap()
   inspect(bar, content="{ spelling : Bar, kind: macro definition }")
@@ -256,7 +256,7 @@ test "macro" {
       #|["Bar", "Bar"]
     ),
   )
-  let max = csr.children().find_first(x => x.spelling() == "max").unwrap()
+  let max = csr.children().find_first(x => x.spelling() == b"max").unwrap()
   let rg = max.extent()
   inspect(max.display_name() |> decode(encoding=UTF8), content="max")
   inspect(max.children(), content="[]")
