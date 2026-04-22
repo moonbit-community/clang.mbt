@@ -1,6 +1,0 @@
-{
-  "targets": {
-    "enums.mbt": ["native"]
-  },
-  "supported-targets": "native"
-}

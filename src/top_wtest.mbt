@@ -55,7 +55,6 @@ test {
   let index = Index::new(false, false)
   try {
     let _tu = index.parse(b"not_exists_file\x00", [], None)
-
   } catch {
     e => inspect(e, content="ParseError(ASTReadError)")
   }
@@ -116,8 +115,9 @@ test "DetailedPreprocessingRecord" {
     content="{ spelling : __llvm__, kind: macro definition }",
   )
   inspect(x.display_name() |> decode(encoding=UTF8), content="__llvm__")
-  let struct_idx = csr_children.search_by(c => c.kind() ==
-    @cursor_kind.StructDecl)
+  let struct_idx = csr_children.search_by(c => {
+    c.kind() == @cursor_kind.StructDecl
+  })
   let st = csr_children[struct_idx.unwrap()]
   inspect(st, content="{ spelling : A, kind: StructDecl }")
   let stty = st.type_()
@@ -242,8 +242,9 @@ test "macro" {
   )
   let bar = csr
     .children()
-    .find_first(x => x.spelling() == b"Bar" &&
-      x.kind() == @cursor_kind.MacroDefinition)
+    .find_first(x => {
+      x.spelling() == b"Bar" && x.kind() == @cursor_kind.MacroDefinition
+    })
     .unwrap()
   inspect(bar, content="{ spelling : Bar, kind: macro definition }")
   let rg = bar.extent()
