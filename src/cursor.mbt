@@ -55,7 +55,15 @@ pub extern "c" fn Cursor::enum_constant_decl_unsigned_value(
 
 ///|
 fn Cursor::children(self : Cursor) -> Iter[Cursor] {
-  Iter::new(fn(f) { Cursor::_visit_children(self, f) })
+  let children : Array[Cursor] = []
+  Cursor::_visit_children(
+    self,
+    fn(child) {
+      children.push(child)
+      VisitContinue
+    },
+  ) |> ignore
+  children.iter()
 }
 
 ///|

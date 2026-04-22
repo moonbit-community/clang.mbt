@@ -10,11 +10,17 @@ extern "c" fn Index::_parse(
 ) -> TranslationUnit = "illusory0x0_clang_Index_parse"
 
 ///|
+enum VisitResult {
+  VisitEnd
+  VisitContinue
+} derive(Eq)
+
+///|
 #owned(self, f)
 extern "c" fn Cursor::_visit_children(
   self : Cursor,
-  f : (Cursor) -> IterResult,
-) -> IterResult = "illusory0x0_clang_Cursor_visit_children"
+  f : (Cursor) -> VisitResult,
+) -> VisitResult = "illusory0x0_clang_Cursor_visit_children"
 
 ///|
 #owned(self, other)
