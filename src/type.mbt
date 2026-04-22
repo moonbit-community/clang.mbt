@@ -19,6 +19,7 @@ pub extern "c" fn Type::unqualified(self : Type) -> Type = "illusory0x0_clang_Ty
 pub extern "c" fn Type::calling_conv(self : Type) -> CallingConv = "illusory0x0_clang_Type_calling_conv"
 
 ///|
+#owned(self)
 pub extern "c" fn Type::arity(self : Type) -> Int = "illusory0x0_clang_Type_arity"
 
 ///|
