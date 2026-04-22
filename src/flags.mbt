@@ -23,6 +23,11 @@ pub enum TranslationUnit_Flags {
 pub impl BitOr for TranslationUnit_Flags with lor(self, other) = "%i32_lor"
 
 ///|
+pub impl Show for TranslationUnit_Flags with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
 // Dummy function to acknowledge all flag variants are part of the API
 fn _all_flags_available() -> Array[TranslationUnit_Flags] {
   [

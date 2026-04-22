@@ -7,6 +7,11 @@ suberror ParseError {
 } derive(Debug, Eq)
 
 ///|
+impl Show for ParseError with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
 type TranslationUnit
 
 ///|

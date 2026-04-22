@@ -85,3 +85,48 @@ enum StorageClass {
   Auto
   Register
 } derive(Debug, Eq)
+
+///|
+fn[T : Debug] show_debug(value : T, logger : &Logger) -> Unit {
+  logger.write_object(to_repr(value))
+}
+
+///|
+pub impl Show for LanguageKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for LinkageKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for VisibilityKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for AvailabilityKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for CallingConv with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for ErrorCode with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for CXX_AccessSpecifier with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+impl Show for StorageClass with output(self, logger) {
+  show_debug(self, logger)
+}
