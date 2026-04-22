@@ -24,7 +24,7 @@
     "eq.mbt": ["native"],
     "token.mbt": ["native"]
   },
-  "supported-targets": ["native"],
+  "supported-targets": "native",
   "warn-list": "-29",
   "native-stub": ["stub.c"],
   "import": ["tonyfettes/encoding", "illusory0x0/clang/cursor_kind"]

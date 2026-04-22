@@ -3,5 +3,5 @@
     "enums.mbt": ["native"],
     "predicate.mbt": ["native"]
   },
-  "supported-targets": ["native"]
+  "supported-targets": "native"
 }
