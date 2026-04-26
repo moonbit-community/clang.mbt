@@ -1,0 +1,37 @@
+import {
+  "tonyfettes/encoding",
+  "illusory0x0/clang/cursor_kind",
+}
+
+warnings = "-29"
+
+supported_targets = "native"
+
+options(
+  link: {
+    "native": {
+      "cc": "gcc",
+      "cc-flags": "-fsanitize=address -fsanitize=undefined",
+      "cc-link-flags": "-L$LLVM_HOME/lib -lclang",
+      "stub-cc": "gcc",
+      "stub-cc-flags": "-I$LLVM_HOME/include -fsanitize=address -fsanitize=undefined",
+    },
+  },
+  "native-stub": [ "stub.c" ],
+  targets: {
+    "cursor.mbt": [ "native" ],
+    "enums.mbt": [ "native" ],
+    "eq.mbt": [ "native" ],
+    "flags.mbt": [ "native" ],
+    "index.mbt": [ "native" ],
+    "internal.mbt": [ "native" ],
+    "source_location.mbt": [ "native" ],
+    "source_range.mbt": [ "native" ],
+    "targetinfo.mbt": [ "native" ],
+    "token.mbt": [ "native" ],
+    "top_wtest.mbt": [ "native" ],
+    "translation_unit.mbt": [ "native" ],
+    "type.mbt": [ "native" ],
+    "types.mbt": [ "native" ],
+  },
+)

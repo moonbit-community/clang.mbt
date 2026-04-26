@@ -2,7 +2,14 @@
 type Index
 
 ///|
-suberror ParseError ErrorCode derive(Show, Eq)
+suberror ParseError {
+  ParseError(ErrorCode)
+} derive(Debug, Eq)
+
+///|
+impl Show for ParseError with output(self, logger) {
+  show_debug(self, logger)
+}
 
 ///|
 type TranslationUnit

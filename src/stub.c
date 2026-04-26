@@ -251,7 +251,6 @@ illusory0x0_clang_Index_parse(Index self, Bytes source_filename,
       Moonbit_array_length(command_line_args), NULL, 0, option, &res->cxtu);
   moonbit_decref(source_filename);   // last used
   moonbit_decref(command_line_args); // last used
-  moonbit_decref(out_ec);            // last used
   return res;
 }
 

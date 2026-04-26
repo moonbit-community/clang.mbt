@@ -4,7 +4,7 @@ pub(all) enum LanguageKind {
   C
   ObjC
   CPlusPlus
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum LinkageKind {
@@ -13,7 +13,7 @@ pub(all) enum LinkageKind {
   Internal
   UniqueExternal
   External
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum VisibilityKind {
@@ -21,7 +21,7 @@ pub(all) enum VisibilityKind {
   Hidden
   Protected
   Default
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum AvailabilityKind {
@@ -29,7 +29,7 @@ pub(all) enum AvailabilityKind {
   Deprecated
   NotAvailable
   NotAccessible
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum CallingConv {
@@ -55,7 +55,7 @@ pub(all) enum CallingConv {
   M68kRTD = 19
   Invalid = 100
   CXCallingConv_Unexposed = 200
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum ErrorCode {
@@ -64,7 +64,7 @@ pub(all) enum ErrorCode {
   Crashed = 2
   InvalidArguments = 3
   ASTReadError = 4
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) enum CXX_AccessSpecifier {
@@ -72,7 +72,7 @@ pub(all) enum CXX_AccessSpecifier {
   Public
   Protected
   Private
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 enum StorageClass {
@@ -84,4 +84,49 @@ enum StorageClass {
   OpenCLWorkGroupLocal
   Auto
   Register
-} derive(Show, Eq)
+} derive(Debug, Eq)
+
+///|
+fn[T : Debug] show_debug(value : T, logger : &Logger) -> Unit {
+  logger.write_object(to_repr(value))
+}
+
+///|
+pub impl Show for LanguageKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for LinkageKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for VisibilityKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for AvailabilityKind with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for CallingConv with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for ErrorCode with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+pub impl Show for CXX_AccessSpecifier with output(self, logger) {
+  show_debug(self, logger)
+}
+
+///|
+impl Show for StorageClass with output(self, logger) {
+  show_debug(self, logger)
+}

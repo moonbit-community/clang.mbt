@@ -1,7 +1,0 @@
-{
-  "targets": {
-    "enums.mbt": ["native"],
-    "predicate.mbt": ["native"]
-  },
-  "supported-targets": ["native"]
-}

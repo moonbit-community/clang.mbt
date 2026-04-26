@@ -17,10 +17,15 @@ pub enum TranslationUnit_Flags {
   VisitImplicitAttributes = 0x2000
   IgnoreNonErrorsFromIncludedFiles = 0x4000
   RetainExcludedConditionalBlocks = 0x8000
-} derive(Show, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub impl BitOr for TranslationUnit_Flags with lor(self, other) = "%i32_lor"
+
+///|
+pub impl Show for TranslationUnit_Flags with output(self, logger) {
+  show_debug(self, logger)
+}
 
 ///|
 // Dummy function to acknowledge all flag variants are part of the API

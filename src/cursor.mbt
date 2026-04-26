@@ -1,13 +1,17 @@
 ///|
+#owned(self)
 pub extern "c" fn Cursor::kind(self : Cursor) -> CursorKind = "illusory0x0_clang_Cursor_kind"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::spelling(self : Cursor) -> Bytes = "illusory0x0_clang_Cursor_spelling"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::display_name(self : Cursor) -> Bytes = "illusory0x0_clang_Cursor_display_name"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::type_(self : Cursor) -> Type = "illusory0x0_clang_Cursor_type_"
 
 ///|
@@ -15,27 +19,34 @@ pub extern "c" fn Cursor::type_(self : Cursor) -> Type = "illusory0x0_clang_Curs
 pub extern "c" fn Cursor::kind_spelling(k : CursorKind) -> Bytes = "illusory0x0_clang_Cursor_kind_spelling"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::semantic_parent(self : Cursor) -> Cursor = "illusory0x0_clang_Cursor_semantic_parent"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::lexical_parent(self : Cursor) -> Cursor = "illusory0x0_clang_Cursor_lexical_parent"
 
 ///|
 pub extern "c" fn Cursor::null() -> Cursor = "illusory0x0_clang_Cursor_null"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::is_null(self : Cursor) -> Bool = "illusory0x0_clang_Cursor_is_null"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::typedef_decl_underlying_type(self : Cursor) -> Type = "illusory0x0_clang_Cursor_typedef_decl_underlying_type"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::enum_decl_integer_type(self : Cursor) -> Type = "illusory0x0_clang_Cursor_enum_decl_integer_type"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::enum_constant_decl_value(self : Cursor) -> Int64 = "illusory0x0_clang_Cursor_enum_constant_decl_value"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::enum_constant_decl_unsigned_value(
   self : Cursor,
 ) -> UInt64 = "illusory0x0_clang_Cursor_enum_constant_decl_unsigned_value"
@@ -44,52 +55,72 @@ pub extern "c" fn Cursor::enum_constant_decl_unsigned_value(
 
 ///|
 fn Cursor::children(self : Cursor) -> Iter[Cursor] {
-  Iter::new(fn(f) { Cursor::_visit_children(self, f) })
+  let children : Array[Cursor] = []
+  Cursor::_visit_children(self, fn(child) {
+    children.push(child)
+    VisitContinue
+  })
+  |> ignore
+  children.iter()
 }
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::canonical(self : Cursor) -> Cursor = "illsuory0x0_clang_Cursor_canonical"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::is_macro_function_like(self : Cursor) -> Bool = "illusory0x0_clang_Cursor_is_macro_function_like"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::is_macro_builtin(self : Cursor) -> Bool = "illusory0x0_clang_Cursor_is_macro_builtin"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::is_function_inlined(self : Cursor) -> Bool = "illusory0x0_clang_Cursor_is_function_inlined"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::language(self : Cursor) -> LanguageKind = "illusory0x0_clang_Cursor_language"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::linkage(self : Cursor) -> LinkageKind = "illusory0x0_clang_Cursor_linkage"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::availability(self : Cursor) -> LinkageKind = "illusory0x0_clang_Cursor_availability"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::visibility(self : Cursor) -> LinkageKind = "illusory0x0_clang_Cursor_visibility"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::cxx_access_specifier(
   self : Cursor,
 ) -> CXX_AccessSpecifier = "illusory0x0_clang_cursor_cxx_access_specifier"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::storage_class(self : Cursor) -> StorageClass = "illusory0x0_clang_cursor_storage_class"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::overloaded_decls_num(self : Cursor) -> Int = "illusory0x0_clang_cursor_overloaded_decls_num"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::overloaded_decls(
   self : Cursor,
   index : Int,
 ) -> Cursor = "illusory0x0_clang_Cursor_overloaded_decls"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::source_location(self : Cursor) -> SourceLocation = "illusory0x0_clang_Cursor_source_location"
 
 ///|
+#owned(self)
 pub extern "c" fn Cursor::extent(self : Cursor) -> SourceRange = "illusory0x0_clang_Cursor_extent"
